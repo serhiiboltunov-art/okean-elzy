@@ -1,104 +1,206 @@
 <title>Океан Ельзи</title>
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: #eef2f5;
-        color: #222;
+        background: #111111;
+        color: #ffffff;
     }
 
     .container {
-        width: 80%;
-        max-width: 850px;
-        margin: 40px auto;
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px 20px 50px;
+    }
+
+    header {
+        text-align: center;
+        padding: 35px 20px;
     }
 
     h1 {
-        text-align: center;
-        color: #163b63;
-        font-size: 38px;
+        font-size: 46px;
+        margin: 0 0 10px;
+        letter-spacing: 2px;
     }
 
-    h2 {
-        color: #163b63;
-        border-bottom: 2px solid #d5dce3;
-        padding-bottom: 8px;
-        margin-top: 30px;
+    .subtitle {
+        color: #b7c7d9;
+        font-size: 19px;
     }
 
     .photo {
         display: block;
         width: 100%;
-        max-width: 650px;
-        margin: 25px auto;
-        border-radius: 12px;
+        max-width: 700px;
+        height: auto;
+        margin: 20px auto 40px;
+        border-radius: 14px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+        background: #1c1c1c;
+        border-radius: 14px;
+        padding: 25px 30px;
+        margin-bottom: 25px;
+        border: 1px solid #303030;
+    }
+
+    h2 {
+        color: #8fb7dc;
+        margin-top: 0;
+        font-size: 25px;
     }
 
     .info {
-        font-size: 18px;
-        line-height: 1.8;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .info-item {
+        background: #252525;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .label {
+        color: #8fb7dc;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .value {
+        font-size: 17px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 17px;
         line-height: 1.7;
+        color: #dddddd;
     }
 
-    .footer {
+    .songs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .song {
+        background: #252525;
+        padding: 10px 16px;
+        border-radius: 20px;
+        color: #dcecff;
+    }
+
+    footer {
         text-align: center;
-        margin-top: 30px;
-        color: #777;
+        color: #777777;
+        margin-top: 35px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 34px;
+        }
+
+        .info {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 20px;
+        }
     }
 </style>
 <div class="container">
 
-    <h1>Океан Ельзи</h1>
+    <header>
+        <h1>Океан Ельзи</h1>
+        <div class="subtitle">Український рок-гурт</div>
+    </header>
 
-    <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Okean_Elzy.jpg/800px-Okean_Elzy.jpg"
+    <img
+        src="images.jpeg"
         alt="Океан Ельзи"
         class="photo"
     >
 
-    <h2>Коротка інформація</h2>
+    <div class="card">
+        <h2>Коротка інформація</h2>
 
-    <div class="info">
-        <p><strong>Назва:</strong> Океан Ельзи</p>
-        <p><strong>Країна:</strong> Україна</p>
-        <p><strong>Рік заснування:</strong> 1994</p>
-        <p><strong>Місто:</strong> Львів</p>
-        <p><strong>Жанр:</strong> рок</p>
-        <p><strong>Вокаліст:</strong> Святослав Вакарчук</p>
+        <div class="info">
+
+            <div class="info-item">
+                <div class="label">Назва</div>
+                <div class="value">Океан Ельзи</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Країна</div>
+                <div class="value">Україна</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Рік заснування</div>
+                <div class="value">1994</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Місто</div>
+                <div class="value">Львів</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Жанр</div>
+                <div class="value">Рок</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Вокаліст</div>
+                <div class="value">Святослав Вакарчук</div>
+            </div>
+
+        </div>
     </div>
 
-    <h2>Про гурт</h2>
+    <div class="card">
+        <h2>Про гурт</h2>
 
-    <p>
-        «Океан Ельзи» — український рок-гурт, заснований
-        у Львові в 1994 році. Гурт є одним із найвідоміших
-        українських музичних колективів.
-    </p>
+        <p>
+            «Океан Ельзи» — український рок-гурт, заснований
+            у Львові в 1994 році. Гурт став одним із найбільш
+            відомих та популярних українських музичних колективів.
+        </p>
 
-    <p>
-        Музика гурту поєднує рок, ліричні тексти та емоційне
-        виконання. Пісні «Океану Ельзи» стали популярними
-        серед слухачів в Україні та за її межами.
-    </p>
-
-    <h2>Популярні пісні</h2>
-
-    <p>
-        «Обійми», «Без бою», «На небі», «Не твоя війна»,
-        «Все буде добре».
-    </p>
-
-    <div class="footer">
-        <p>Лабораторна робота з HTML</p>
+        <p>
+            Творчість гурту поєднує рок-музику, емоційні тексти
+            та яскраве вокальне виконання. Пісні «Океану Ельзи»
+            відомі слухачам в Україні та за її межами.
+        </p>
     </div>
+
+    <div class="card">
+        <h2>Популярні пісні</h2>
+
+        <div class="songs">
+            <div class="song">Обійми</div>
+            <div class="song">Без бою</div>
+            <div class="song">На небі</div>
+            <div class="song">Не твоя війна</div>
+<div class="song">Все буде добре</div>
+        </div>
+    </div>
+
+    <footer>
+        Лабораторна робота з HTML
+    </footer>
 
 </div>
